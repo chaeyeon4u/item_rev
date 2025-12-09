@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <FDL version="2.1">
-  <Form id="Form_Work" width="1280" height="380" titletext="Form_Work">
+  <Form id="Form_Work" width="1280" height="380" titletext="Form_Work" onload="Form_Work_onload">
     <Layouts>
       <Layout width="1280" height="380" screenid="Desktop_screen">
         <Static id="Static00_01" taborder="0" text="등록자" left="20" top="24" width="54" height="23" cssclass="sta_WF_detailLabel" font="bold 13px/normal &quot;Malgun Gothic&quot;"/>
@@ -14,10 +14,25 @@
         <Button id="btn_close" taborder="8" text="닫기" left="600" top="330" width="84" height="30" onclick="btn_close_onclick"/>
       </Layout>
     </Layouts>
-    <Script type="xscript5.1"><![CDATA[
+    <Script type="xscript5.1"><![CDATA[this.on_initEvent = function()
+{
+    trace("on_initEvent 실행됨");
+    this.addEventHandler("onload", this.Form_Work_onload, this);
+};
+
+this.Form_Work_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var args = this.getOwnerFrame();
+	if (!ownerFrame) return;
+
+	this.edt_slitmNm.set_value(args.slitmNm || "");
+	this.edt_title.set_value(args.title || "");
+	this.edt_cntn.set_value(args.cntn || "");
+};
+
 this.btn_close_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.close()
+	this.close();
 };
 ]]></Script>
   </Form>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Work" width="1280" height="720" titletext="Form_Work">
+    <Layouts>
+      <Layout width="1280" height="720" screenid="Desktop_screen">
+        <Grid id="Grid00" taborder="0" left="35" top="90" width="1210" height="578">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="48" band="left"/>
+                <Column size="48" band="left"/>
+                <Column size="100" band="left"/>
+                <Column size="200" band="left"/>
+                <Column size="48" band="left"/>
+                <Column size="48" band="left"/>
+                <Column size="48" band="left"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell/>
+                <Cell col="1" text="No"/>
+                <Cell col="2" text="판매상품명"/>
+                <Cell col="3" text="제목"/>
+                <Cell col="4" text="글쓴이"/>
+                <Cell col="5" text="작성일"/>
+                <Cell col="6"/>
+              </Band>
+              <Band id="body">
+                <Cell/>
+                <Cell col="1"/>
+                <Cell col="2"/>
+                <Cell col="3"/>
+                <Cell col="4"/>
+                <Cell col="5"/>
+                <Cell col="6"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

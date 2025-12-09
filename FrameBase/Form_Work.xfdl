@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Work" width="1280" height="720" titletext="Form_Work">
+    <Layouts>
+      <Layout width="1280" height="720" screenid="Desktop_screen">
+        <Static id="Static00_01" taborder="0" text="등록자" left="27" top="34" width="54" height="23" cssclass="sta_WF_detailLabel" font="bold 13px/normal &quot;Malgun Gothic&quot;"/>
+        <Edit id="edt_rgstId" taborder="1" left="81" top="31" width="200" height="23" onchanged="edt_rgstId_onchanged"/>
+        <Static id="Static00_02" taborder="2" text="상품명" left="27" top="64" width="54" height="23" cssclass="sta_WF_detailLabel" font="bold 13px/normal &quot;Malgun Gothic&quot;"/>
+        <Edit id="edt_slitmNm" taborder="3" left="85" top="64" width="576" height="23" onchanged="edt_slitmNm_onchanged"/>
+        <Static id="Static00" taborder="4" text="제목" left="27" top="94" width="54" height="23" cssclass="sta_WF_detailLabel" font="bold 13px/normal &quot;Malgun Gothic&quot;"/>
+        <Edit id="edt_title" taborder="5" left="85" top="94" width="1151" height="23" onchanged="edt_title_onchanged"/>
+        <Static id="Static00_00" taborder="6" text="내용" left="27" top="134" width="54" height="23" cssclass="sta_WF_detailLabel" font="bold 13px/normal &quot;Malgun Gothic&quot;"/>
+        <Edit id="edt_cntn" taborder="7" left="86" top="137" width="1150" height="163" onchanged="edt_cntn_onchanged"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

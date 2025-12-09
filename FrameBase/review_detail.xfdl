@@ -22,17 +22,12 @@
 
 this.Form_Work_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
-	var ownerFrame = this.getOwnerFrame();
+	var args = this.getOwnerFrame();
 	if (!ownerFrame) return;
 
-	var args = ownerFrame;
-	if (!args) return;
-
-	var slitmNm = args.slitmNm;
-	if (slitmNm === undefined || slitmNm === null) return;
-
-	// 전달받은 상품명을 상세 화면에 표시
-	this.edt_slitmNm.set_value(slitmNm);
+	this.edt_slitmNm.set_value(args.slitmNm || "");
+	this.edt_title.set_value(args.title || "");
+	this.edt_cntn.set_value(args.cntn || "");
 };
 
 this.btn_close_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)

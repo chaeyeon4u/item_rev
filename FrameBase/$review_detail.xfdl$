@@ -23,7 +23,7 @@
 this.Form_Work_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
 	var args = this.getOwnerFrame();
-	if (!ownerFrame) return;
+	if (!args) return;
 
 	this.edt_slitmNm.set_value(args.slitmNm || "");
 	this.edt_title.set_value(args.title || "");

@@ -44,16 +44,22 @@
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.grd_post_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
 {
-	if (e.row < 0) return;
+	var row = e.row;
+    if (row < 0) return;
 
-    // 더블클릭 시 팝업 화면 호출
-    var slitmNm = "test";
-	var popupArgs = { slitmNm: "test" };
-	var popupOption = "showtitlebar=true showstatusbar=false";
+    // 선택 행 데이터를 팝업에 전달
+    var popupArgs = {
+        itemName: this.dsSlitmRev.getColumn(row, "itemName"),
+        registrantId: this.dsSlitmRev.getColumn(row, "registrantId"),
+        title: this.dsSlitmRev.getColumn(row, "title"),
+        content: this.dsSlitmRev.getColumn(row, "content"),
+        registDtm: this.dsSlitmRev.getColumn(row, "registDtm")
+    };
 
-	// 상품평 상세 팝업 호출 시 선택된 상품명을 전달
-	nexacro.open("postReviewPopup", "FrameBase::review_detail.xfdl", this.getOwnerFrame(), popupArgs, popupOption);
-};
-]]></Script>
+    var popupOption = "showtitlebar=true showstatusbar=false";
+    var popupId = "reviewDetailPopup_" + (new Date().getTime());
+	// 상품평 상세 팝업 호출 시 선택된 row data
+    nexacro.open(popupId, "FrameBase::review_detail.xfdl", this.getOwnerFrame(), popupArgs, popupOption);
+};]]></Script>
   </Form>
 </FDL>
